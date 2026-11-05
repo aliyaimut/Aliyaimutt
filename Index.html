@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Florist Studio - Jual Bunga Segar & Karangan Bunga</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Inter & Playfair Display untuk kesan elegan -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fdf2f4',
+                            100: '#fce7eb',
+                            400: '#f472b6',
+                            500: '#ec4899',
+                            600: '#db2777',
+                            700: '#be185d',
+                            800: '#9d174d',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #fff0f3 0%, #fff 50%, #fce7eb 100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800 antialiased selection:bg-brand-500 selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white shadow-md">
+                        <i class="fa-solid fa-seedling text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="font-serif text-2xl font-bold text-gray-900 tracking-tight">Florist<span class="text-brand-600">Studio</span></span>
+                        <p class="text-[10px] tracking-widest uppercase text-gray-500 font-semibold">Florist & Gift Shop</p>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex space-x-8 font-medium text-sm text-gray-700">
+                    <a href="#beranda" class="hover:text-brand-600 transition-colors">Beranda</a>
+                    <a href="#katalog" class="hover:text-brand-600 transition-colors">Katalog & Harga</a>
+                    <a href="#layanan" class="hover:text-brand-600 transition-colors">Layanan & Pengiriman</a>
+                    <a href="#pembayaran" class="hover:text-brand-600 transition-colors">Metode Pembayaran</a>
+                </nav>
+
+                <!-- WA Fast Action Button -->
+                <a href="https://wa.me/628211678815?text=Halo%20FloristStudio,%20saya%20ingin%20bertanya%20mengenai%20produk%20bunga" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-medium px-5 py-2.5 rounded-full text-sm shadow-md transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                    <span>Chat WhatsApp</span>
+                </a>
+
+                <!-- Mobile Menu Button (Simple Toggle visual) -->
+                <div class="md:hidden flex items-center">
+                    <a href="https://wa.me/628211678815" target="_blank" class="bg-emerald-500 text-white p-2.5 rounded-full shadow">
+                        <i class="fa-brands fa-whatsapp text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="gradient-bg py-16 lg:py-24 overflow-hidden relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-center lg:text-left">
+                    <span class="inline-block bg-brand-100 text-brand-800 text-xs font-semibold px-4 py-1.5 rounded-full border border-brand-200 uppercase tracking-wider">
+                        ✨ Melayani Pesan Langsung & COD
+                    </span>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
+                        Ungkapkan Perasaan Dengan <span class="text-brand-600 italic">Bunga Segar Terbaik</span>
+                    </h1>
+                    <p class="text-gray-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0">
+                        Menyediakan berbagai pilihan Hand Bouquet, Karangan Bunga Papan, Bunga Meja, hingga Custom Buket untuk moment spesial Anda. Bisa diantar sampai ke rumah (COD) atau ambil di tempat!
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                        <a href="#katalog" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-center">
+                            Lihat Katalog & Harga
+                        </a>
+                        <a href="https://wa.me/628211678815?text=Halo,%20saya%20mau%20order%20bunga" target="_blank" class="bg-white border border-gray-300 hover:border-emerald-500 hover:text-emerald-600 text-gray-700 font-semibold px-8 py-3.5 rounded-full shadow-sm hover:shadow transition-all flex items-center justify-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-xl text-emerald-500"></i> Order via WA
+                        </a>
+                    </div>
+                    <!-- Quick Badges -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 border-t border-brand-200/60 max-w-lg mx-auto lg:mx-0 text-center">
+                        <div>
+                            <p class="font-bold text-gray-900 text-lg">100%</p>
+                            <p class="text-xs text-gray-500">Bunga Segar</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-lg">COD</p>
+                            <p class="text-xs text-gray-500">Siap Diantar</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-gray-900 text-lg">Fast</p>
+                            <p class="text-xs text-gray-500">Respon WA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="w-full h-80 sm:h-96 lg:h-[480px] rounded-3xl overflow-hidden shadow-2xl relative">
+                        <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=1000&q=80" 
+                             alt="Rangkaian Bunga Segar" 
+                             class="w-full h-full object-cover transform hover:scale-105 transition duration-700"
+                             onerror="this.src='https://placehold.co/800x800/fce7eb/be185d?text=Bunga+Segar'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white p-4 rounded-xl bg-white/20 backdrop-blur-md border border-white/30">
+                            <p class="font-semibold text-sm">Pesan Cepat & Mudah</p>
+                            <p class="text-xs opacity-90">Cukup hubungi WhatsApp 08211678815 untuk pemesanan instant.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Katalog Bunga & List Harga -->
+    <section id="katalog" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Katalog & List Harga Bunga</h2>
+                <p class="text-gray-600">Pilih jenis rangkaian bunga favorit Anda. Harga terjangkau dengan kualitas bunga segar pilihan.</p>
+                
+                <!-- Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mt-8">
+                    <button onclick="filterCategory('all')" class="cat-btn active px-5 py-2 rounded-full text-sm font-medium bg-brand-600 text-white shadow-sm transition">Semua</button>
+                    <button onclick="filterCategory('bouquet')" class="cat-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Hand Bouquet</button>
+                    <button onclick="filterCategory('papan')" class="cat-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Bunga Papan</button>
+                    <button onclick="filterCategory('meja')" class="cat-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Bunga Meja</button>
+                    <button onclick="filterCategory('custom')" class="cat-btn px-5 py-2 rounded-full text-sm font-medium bg-gray-100 text-gray-600 hover:bg-gray-200 transition">Money/Custom Bouquet</button>
+                </div>
+            </div>
+
+            <!-- Grid Card Produk -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="productGrid">
+                
+                <!-- Card 1 -->
+                <div class="product-item bouquet group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80" 
+                             alt="Buket Mawar Merah Elegant" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Buket+Mawar'">
+                        <span class="absolute top-4 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Bunga Segar</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Hand Bouquet</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Buket Mawar Merah Classic</h3>
+                            <p class="text-gray-500 text-sm mb-4">Rangkaian 10 tangkai mawar merah segar dengan balutan kertas wrapping premium.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 150.000</span>
+                                </div>
+                                <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded">Stok Ready</span>
+                            </div>
+                            <button onclick="orderWA('Buket Mawar Merah Classic', 'Rp 150.000')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-item bouquet group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=600&q=80" 
+                             alt="Buket Lily & Baby Breath" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Buket+Lily'">
+                        <span class="absolute top-4 left-4 bg-brand-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow">Terfavorit</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Hand Bouquet</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Sweet Lily & Baby Breath</h3>
+                            <p class="text-gray-500 text-sm mb-4">Perpaduan bunga Lily putih harum dan baby breath yang lembut & romantis.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 250.000</span>
+                                </div>
+                                <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded">Stok Ready</span>
+                            </div>
+                            <button onclick="orderWA('Sweet Lily & Baby Breath', 'Rp 250.000')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-item papan group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=600&q=80" 
+                             alt="Bunga Papan Ucapan Selamat" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Bunga+Papan'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Bunga Papan</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Papan Congratulation / Wedding</h3>
+                            <p class="text-gray-500 text-sm mb-4">Ukuran 2x1.25m, bunga segar penuh di atas & bawah. Ucapan khusus.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 500.000</span>
+                                </div>
+                                <span class="text-xs bg-emerald-100 text-emerald-700 px-2.5 py-1 rounded">Gratis Ongkir Kota</span>
+                            </div>
+                            <button onclick="orderWA('Bunga Papan Congratulation/Wedding', 'Rp 500.000')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="product-item meja group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&w=600&q=80" 
+                             alt="Bunga Vas Meja" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Bunga+Meja'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Bunga Meja</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Anggrek / Rose Vase Arrange</h3>
+                            <p class="text-gray-500 text-sm mb-4">Rangkaian bunga meja mewah cocok untuk dekorasi kantor, rumah, atau hadiah.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 300.000</span>
+                                </div>
+                                <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded">Termasuk Vas</span>
+                            </div>
+                            <button onclick="orderWA('Bunga Vas Meja', 'Rp 300.000')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="product-item custom group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=600&q=80" 
+                             alt="Money Bouquet" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Money+Bouquet'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Custom Bouquet</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Money & Snack Bouquet</h3>
+                            <p class="text-gray-500 text-sm mb-4">Buket uang/snack sesuai request lembaran & nominal. Cocok untuk Wisuda & Ultah.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Jasa Mulai</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 100.000</span>
+                                </div>
+                                <span class="text-xs bg-brand-100 text-brand-700 px-2.5 py-1 rounded">Custom Suka-suka</span>
+                            </div>
+                            <button onclick="orderWA('Money & Snack Bouquet Custom', 'Rp 100.000 (Jasa)')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="product-item papan group rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1508615070457-7baeba4003ab?auto=format&fit=crop&w=600&q=80" 
+                             alt="Bunga Papan Duka Cita" 
+                             class="w-full h-full object-cover group-hover:scale-110 transition duration-500"
+                             onerror="this.src='https://placehold.co/600x400/fce7eb/be185d?text=Duka+Cita'">
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <span class="text-xs text-brand-600 font-semibold uppercase tracking-wider">Bunga Papan</span>
+                            <h3 class="font-bold text-xl text-gray-900 mt-1 mb-2">Papan Bunga Duka Cita</h3>
+                            <p class="text-gray-500 text-sm mb-4">Desain khidmat & elegan. Pengiriman cepat untuk ungkapan belasungkawa.</p>
+                        </div>
+                        <div>
+                            <div class="flex justify-between items-center mb-4">
+                                <div>
+                                    <span class="text-xs text-gray-400 block">Mulai dari</span>
+                                    <span class="text-xl font-bold text-brand-600">Rp 450.000</span>
+                                </div>
+                                <span class="text-xs bg-blue-100 text-blue-700 px-2.5 py-1 rounded">Prioritas Cepat</span>
+                            </div>
+                            <button onclick="orderWA('Papan Bunga Duka Cita', 'Rp 450.000')" class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2.5 rounded-xl flex items-center justify-center gap-2 transition">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> Pesan via WA
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Layanan & Bentuk Pemesanan -->
+    <section id="layanan" class="py-16 bg-gray-50 border-y border-gray-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-3">Waktu & Bentuk Pemesanan</h2>
+                <p class="text-gray-600">Kami memberikan kemudahan dan kenyamanan penuh dalam setiap pemesanan bunga Anda.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Option 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-6 items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-brand-100 text-brand-600 flex items-center justify-center flex-shrink-0 text-2xl">
+                        <i class="fa-solid fa-store"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">1. Pesan & Ambil Di Tempat</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Anda bisa memesan terlebih dahulu melalui WhatsApp lalu mengambil bunga secara langsung di toko kami, atau langsung datang ke outlet untuk memilih bunga segar favorit Anda secara langsung.
+                        </p>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                            <i class="fa-solid fa-clock"></i> Buka Setiap Hari: 08.00 - 21.00 WIB
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Option 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 flex gap-6 items-start">
+                    <div class="w-14 h-14 rounded-2xl bg-emerald-100 text-emerald-600 flex items-center justify-center flex-shrink-0 text-2xl">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-gray-900 mb-2">2. Delivery / COD (Diantar Ke Rumah)</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            Malas keluar rumah? Kami siap mengantarkan pesanan bunga langsung ke pintu rumah Anda atau lokasi acara. Tersedia layanan Bayar di Tempat (COD) untuk keamanan & kenyamanan Anda!
+                        </p>
+                        <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full">
+                            <i class="fa-solid fa-shield-check"></i> Amanah & Bunga Dijamin Aman
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metode Pembayaran -->
+    <section id="pembayaran" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <h2 class="font-serif text-3xl font-bold text-gray-900 mb-3">Metode Pembayaran</h2>
+                <p class="text-gray-600">Kemudahan transaksi menggunakan berbagai E-Wallet, Rekening Bank, maupun Tunai saat COD.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- E-Wallet -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900">E-Wallet</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-gray-100">
+                            <span class="font-medium">GoPay / OVO</span>
+                            <span class="text-xs text-gray-400">08211678815</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-gray-100">
+                            <span class="font-medium">DANA / ShopeePay</span>
+                            <span class="text-xs text-gray-400">08211678815</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Transfer Bank -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-md transition">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900">Transfer Bank</h3>
+                    </div>
+                    <ul class="space-y-2 text-sm text-gray-600">
+                        <li class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-gray-100">
+                            <span class="font-medium">Bank BCA / Mandiri</span>
+                            <span class="text-xs text-gray-400">Konfirmasi via WA</span>
+                        </li>
+                        <li class="flex justify-between items-center bg-white p-2.5 rounded-lg border border-gray-100">
+                            <span class="font-medium">Bank BRI / BNI</span>
+                            <span class="text-xs text-gray-400">Konfirmasi via WA</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- COD / Cash -->
+                <div class="p-6 rounded-2xl border border-gray-100 bg-gray-50/50 hover:bg-white hover:shadow-md transition sm:col-span-2 lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-900">Bayar di Tempat (COD)</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 bg-white p-3 rounded-lg border border-gray-100 leading-relaxed">
+                        Bayar tunai langsung ke kurir saat bunga tiba di lokasi Anda. Praktis & Tanpa Khawatir!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Banner Call to Action WhatsApp -->
+    <section class="py-16 bg-gradient-to-r from-emerald-600 to-teal-700 text-white relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-4">Butuh Rangkaian Bunga Custom atau Mendadak?</h2>
+            <p class="text-emerald-100 text-base sm:text-lg mb-8 max-w-2xl mx-auto">
+                Tim Florist kami siap membantu memilihkan bunga terbaik sesuai budget dan momen spesial Anda.
+            </p>
+            <a href="https://wa.me/628211678815?text=Halo%20FloristStudio,%20saya%20mau%20konsultasi%20order%20bunga" target="_blank" class="inline-flex items-center gap-3 bg-white text-emerald-700 hover:bg-emerald-50 font-bold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-1">
+                <i class="fa-brands fa-whatsapp text-2xl text-emerald-600"></i>
+                <span>Hubungi WA: 08211678815</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-8 h-8 rounded-full bg-brand-500 flex items-center justify-center text-white">
+                            <i class="fa-solid fa-seedling text-sm"></i>
+                        </div>
+                        <span class="font-serif text-xl font-bold text-white tracking-tight">Florist<span class="text-brand-500">Studio</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400 leading-relaxed">
+                        Jasa penjualan bunga segar, buket, dan papan ucapan tepercaya. Siap mengantarkan kebahagiaan untuk setiap momen Anda.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Kontak & Pemesanan</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2">
+                            <i class="fa-brands fa-whatsapp text-emerald-400"></i>
+                            <span>08211678815</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-clock text-brand-400"></i>
+                            <span>Buka Setiap Hari (08.00 - 21.00 WIB)</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-brand-400"></i>
+                            <span>Melayani Order di Tempat & Delivery/COD</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Layanan Kami</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>• Hand Bouquet (Buket Tangan)</li>
+                        <li>• Bunga Papan Wedding & Duka Cita</li>
+                        <li>• Bunga Meja & Vas</li>
+                        <li>• Money Bouquet & Custom Gift</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-6 text-center text-xs text-gray-500">
+                <p>&copy; 2026 FloristStudio. All Rights Reserved. Order via WhatsApp 08211678815.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript untuk Filter & Order WA -->
+    <script>
+        // Fungsi Order via WhatsApp dengan Pesan Otomatis
+        function orderWA(namaProduk, harga) {
+            const noWA = "628211678815";
+            const message = `Halo FloristStudio, saya ingin memesan:\n\n- *Produk*: ${namaProduk}\n- *Harga*: ${harga}\n- *Metode Pengiriman*: (Diantar/Ambil di Tempat)\n\nMohon info selengkapnya ya! Terima kasih.`;
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/${noWA}?text=${encodedMessage}`, '_blank');
+        }
+
+        // Fungsi Filter Katalog Produk
+        function filterCategory(category) {
+            // Update Active Class pada Tombol Filter
+            const buttons = document.querySelectorAll('.cat-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-brand-600', 'text-white');
+                btn.classList.add('bg-gray-100', 'text-gray-600');
+            });
+            event.target.classList.remove('bg-gray-100', 'text-gray-600');
+            event.target.classList.add('active', 'bg-brand-600', 'text-white');
+
+            // Show/Hide Produk
+            const items = document.querySelectorAll('.product-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
